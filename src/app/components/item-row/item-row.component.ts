@@ -1,11 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-pizza-row',
-  templateUrl: './pizza-row.component.html',
-  styleUrls: ['./pizza-row.component.scss']
+  selector: 'app-item-row',
+  templateUrl: './item-row.component.html',
+  styleUrls: ['./item-row.component.scss']
 })
-export class PizzaRowComponent implements OnInit {
+export class ItemRowComponent implements OnInit {
 
   @Input() identifier: string;
   @Input() description: string;
