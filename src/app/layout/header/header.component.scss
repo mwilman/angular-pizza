@@ -1,0 +1,14 @@
+.header {
+  margin-bottom: 20px;
+  height: 100px;
+  background: cornflowerblue;
+  align-items: flex-end;
+  padding: 5px 20px;
+
+  .button {
+    padding: 20px;
+    background: chocolate;
+    border: solid 2px chocolate;
+    border-radius: 10px;
+  }
+}
