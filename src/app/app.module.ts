@@ -7,6 +7,7 @@ import { PizzaRowComponent } from './components/pizza-overview/pizza-row/pizza-r
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { PizzaOverviewComponent } from './components/pizza-overview/pizza-overview.component';
+import { PastaOverviewComponent } from './components/pasta-overview/pasta-overview.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PizzaOverviewComponent } from './components/pizza-overview/pizza-overvi
     PizzaRowComponent,
     HeaderComponent,
     FooterComponent,
-    PizzaOverviewComponent
+    PizzaOverviewComponent,
+    PastaOverviewComponent
   ],
   imports: [
     BrowserModule,
