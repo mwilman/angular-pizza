@@ -1,4 +1,6 @@
-const products: Product[] = [
+import {Product} from './item-row/product';
+
+export const products: Product[] = [
   {
     identifier: '1',
     description: 'Pizza Margeritha',

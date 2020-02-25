@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { products } from '../products';
 
 @Component({
   selector: 'app-pizza-overview',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pizza-overview.component.scss']
 })
 export class PizzaOverviewComponent implements OnInit {
-
+  products = products.filter(product => product.type === 'pizza');
   constructor() { }
 
   ngOnInit(): void {

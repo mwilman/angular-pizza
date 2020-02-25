@@ -1,9 +1,5 @@
 <div class="space-between flex-column">
-  <div class="fast-food">
-    <app-item-row identifier="8" description="Pommes klein" price="1.20" (notify)="onNotify()"></app-item-row>
-    <app-item-row identifier="9" description="Pommes groß" price="2.00" (notify)="onNotify()"></app-item-row>
-  </div>
-  <div class="ice">
-    <app-item-row identifier="10" description="Ben  & Jerry's Ice" price="4.99" (notify)="onNotify()"></app-item-row>
+  <div *ngFor="let product of products">
+    <app-item-row [product]="product" (notify)="onNotify()"></app-item-row>
   </div>
 </div>

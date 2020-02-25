@@ -1,14 +1,14 @@
 <div class="flex-row row">
   <div class="id">
-    <span>{{identifier}}</span>
+    <span>{{product.identifier}}</span>
   </div>
   <div class="description">
-    <span>{{description}}</span>
+    <span>{{product.description}}</span>
   </div>
   <div class="price">
-    <span>{{price | currency: 'EUR':'symbol':undefined:'de-DE'}}</span>
+    <span>{{product.price | currency: 'EUR':'symbol':undefined:'de-DE'}}</span>
   </div>
-  <div class="button" *ngIf="price > 0" (click)="notify.emit()">
+  <div class="button" *ngIf="product.price > 0" (click)="notify.emit()">
     <span>Bestellen</span>
   </div>
 </div>

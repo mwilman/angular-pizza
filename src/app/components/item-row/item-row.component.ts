@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Product} from './product';
 
 @Component({
   selector: 'app-item-row',
@@ -7,9 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ItemRowComponent implements OnInit {
 
-  @Input() identifier: string;
-  @Input() description: string;
-  @Input() price: number;
+  @Input() product: Product;
   @Output() notify = new EventEmitter();
 
   constructor() { }

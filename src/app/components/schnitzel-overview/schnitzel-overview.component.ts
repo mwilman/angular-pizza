@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { products } from '../products';
 
 @Component({
   selector: 'app-schnitzel-overview',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schnitzel-overview.component.scss']
 })
 export class SchnitzelOverviewComponent implements OnInit {
+  products = products.filter(product => product.type === 'schnitzel');
 
   constructor() { }
 
