@@ -10,18 +10,14 @@ import { products } from '../products';
 export class SnacksOverviewComponent implements OnInit {
 
   products = products.filter(product => product.type === 'snacks');
-  constructor(private cartService: CartService) { }
+  constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
   }
 
-  // onNotify(product) {
-  //  this.cartService.addToCart(product);
-  //  console.log(product);
-  //  alert('Order');
-  // }
-
-  onNotify() {
+   onNotify(product) {
+    this.cartService.addToCart(product);
+    console.log(product);
     alert('Order');
-  }
+   }
 }
