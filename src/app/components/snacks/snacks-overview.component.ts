@@ -12,4 +12,7 @@ export class SnacksOverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNotify() {
+    alert('Order');
+  }
 }

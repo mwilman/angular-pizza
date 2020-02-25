@@ -12,4 +12,15 @@
   .price {
     width: 20%;
   }
+
+  .id, .description, .price {
+    align-self: center;
+  }
+
+  .button {
+    padding: 10px;
+    background: orange;
+    border: solid 2px orange;
+    border-radius: 10px;
+  }
 }

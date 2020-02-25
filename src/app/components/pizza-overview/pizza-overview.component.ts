@@ -12,4 +12,7 @@ export class PizzaOverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNotify() {
+    alert('Notify');
+  }
 }

@@ -8,4 +8,7 @@
   <div class="price">
     <span>{{price | currency: 'EUR':'symbol':undefined:'de-DE'}}</span>
   </div>
+  <div class="button" *ngIf="price > 0" (click)="notify.emit()">
+    <span>Bestellen</span>
+  </div>
 </div>

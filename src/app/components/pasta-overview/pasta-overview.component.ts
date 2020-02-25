@@ -12,4 +12,7 @@ export class PastaOverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNotify() {
+    alert('Order');
+  }
 }

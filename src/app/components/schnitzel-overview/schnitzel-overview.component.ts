@@ -12,4 +12,7 @@ export class SchnitzelOverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNotify() {
+    alert('Order');
+  }
 }
