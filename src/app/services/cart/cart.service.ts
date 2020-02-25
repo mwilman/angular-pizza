@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Product} from '../components/item-row/product';
+import {Product} from '../../components/item-row/product';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,13 @@ export class CartService {
 
   getItems() {
     return this.items;
+  }
+
+  deleteItem(product: Product) {
+    const index = this.items.indexOf(product);
+    if (index > -1) {
+      this.items.splice(index, 1);
+    }
   }
 
   clearCart() {
