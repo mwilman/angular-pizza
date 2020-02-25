@@ -10,6 +10,7 @@ import { PastaOverviewComponent } from './components/pasta-overview/pasta-overvi
 import {ItemRowComponent} from './components/item-row/item-row.component';
 import { ImprintComponent } from './core/imprint/imprint.component';
 import { ContactComponent } from './core/contact/contact.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './core/contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

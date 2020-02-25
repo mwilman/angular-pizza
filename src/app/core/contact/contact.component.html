@@ -1,3 +1,19 @@
-<div class="contact-form">
+<form class="contact-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="text-input">
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+  </div>
 
-</div>
+  <div class="text-input">
+    <label>
+      Ihre Nachricht:
+      <input type="text" formControlName="message">
+    </label>
+  </div>
+
+  <div class="button">
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+  </div>
+</form>
