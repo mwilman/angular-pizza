@@ -8,6 +8,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { PizzaOverviewComponent } from './components/pizza-overview/pizza-overview.component';
 import { PastaOverviewComponent } from './components/pasta-overview/pasta-overview.component';
 import {ItemRowComponent} from './components/item-row/item-row.component';
+import { ImprintComponent } from './core/imprint/imprint.component';
+import { ContactComponent } from './core/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {ItemRowComponent} from './components/item-row/item-row.component';
     HeaderComponent,
     FooterComponent,
     PizzaOverviewComponent,
-    PastaOverviewComponent
+    PastaOverviewComponent,
+    ImprintComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
