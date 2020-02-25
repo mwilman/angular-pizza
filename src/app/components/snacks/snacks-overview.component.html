@@ -2,10 +2,4 @@
   <div *ngFor="let product of products">
     <app-item-row [product]="product" (notify)="onNotify(product)"></app-item-row>
   </div>
-
-  <div *ngIf="this.cartService.getItems().length > 0">
-    <div *ngFor="let product of this.cartService.getItems()">
-      <span>ID: {{product.identifier}} {{product.price | currency: 'EUR' : 'symbol' : undefined: 'de-DE'}}</span>
-    </div>
-  </div>
 </div>
