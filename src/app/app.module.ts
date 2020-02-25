@@ -11,6 +11,8 @@ import {ItemRowComponent} from './components/item-row/item-row.component';
 import { ImprintComponent } from './core/imprint/imprint.component';
 import { ContactComponent } from './core/contact/contact.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SnacksOverviewComponent } from './components/snacks/snacks-overview.component';
+import { SchnitzelOverviewComponent } from './components/schnitzel-overview/schnitzel-overview.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     PizzaOverviewComponent,
     PastaOverviewComponent,
     ImprintComponent,
-    ContactComponent
+    ContactComponent,
+    SnacksOverviewComponent,
+    SchnitzelOverviewComponent
   ],
   imports: [
     BrowserModule,
