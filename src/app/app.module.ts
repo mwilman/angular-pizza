@@ -13,7 +13,10 @@ import { ContactComponent } from './core/contact/contact.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SnacksOverviewComponent } from './components/snacks/snacks-overview.component';
 import { SchnitzelOverviewComponent } from './components/schnitzel-overview/schnitzel-overview.component';
+import {registerLocaleData} from '@angular/common';
+import localeDe from '@angular/common/locales/de';
 
+registerLocaleData(localeDe);
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,4 +38,5 @@ import { SchnitzelOverviewComponent } from './components/schnitzel-overview/schn
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
