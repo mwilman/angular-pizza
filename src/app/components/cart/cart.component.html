@@ -1,0 +1,17 @@
+<p *ngIf="products.length === 0">
+  Bitte platzieren Sie erst erst Produkte in den Warenkorb! (Warenkorb leer)
+</p>
+<div class="cart row flex-row" *ngFor="let product of products">
+    <div class="id">
+      <span>{{product.identifier}}</span>
+    </div>
+    <div class="description">
+      <span>{{product.description}}</span>
+    </div>
+    <div class="price">
+      <app-euro-display [value]="product.price"></app-euro-display>
+    </div>
+    <div class="button">
+      Löschen
+    </div>
+</div>

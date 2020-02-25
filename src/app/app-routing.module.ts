@@ -6,6 +6,7 @@ import {ImprintComponent} from './core/imprint/imprint.component';
 import {ContactComponent} from './core/contact/contact.component';
 import {SnacksOverviewComponent} from './components/snacks/snacks-overview.component';
 import {SchnitzelOverviewComponent} from './components/schnitzel-overview/schnitzel-overview.component';
+import {CartComponent} from './components/cart/cart.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'snacks', component: SnacksOverviewComponent},
   {path: 'imprint', component: ImprintComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'cart', component: CartComponent},
   {path: '', redirectTo: 'pizza', pathMatch: 'full'},
 ];
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { products } from '../products';
+import {CartService} from '../../cart/cart.service';
 
 @Component({
   selector: 'app-schnitzel-overview',
@@ -9,12 +10,13 @@ import { products } from '../products';
 export class SchnitzelOverviewComponent implements OnInit {
   products = products.filter(product => product.type === 'schnitzel');
 
-  constructor() { }
+  constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
   }
 
-  onNotify() {
-    alert('Order');
+  onNotify(product) {
+    this.cartService.addToCart(product);
+    console.log(product);
   }
 }

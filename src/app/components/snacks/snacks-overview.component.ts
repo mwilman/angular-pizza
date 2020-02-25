@@ -18,6 +18,5 @@ export class SnacksOverviewComponent implements OnInit {
    onNotify(product) {
     this.cartService.addToCart(product);
     console.log(product);
-    alert('Order');
    }
 }

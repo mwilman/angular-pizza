@@ -6,7 +6,7 @@
     <span>{{product.description}}</span>
   </div>
   <div class="price">
-    <span>{{product.price | currency: 'EUR':'symbol':undefined:'de-DE'}}</span>
+    <app-euro-display [value]="product.price"></app-euro-display>
   </div>
   <div class="button" *ngIf="product.price > 0" (click)="notify.emit()">
     <span>Bestellen</span>
