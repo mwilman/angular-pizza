@@ -20,5 +20,7 @@
   <div class="category-select">
     <app-dropdown [options]="options" (notify)="onChange($event)"></app-dropdown>
   </div>
-  <app-button label="Senden" (notify)="onSubmit()" color="orange"></app-button>
+  <div class="submit-button flex-row space-between">
+    <app-button label="Senden" (notify)="onSubmit()" color="orange"></app-button>
+  </div>
 </form>
