@@ -8,5 +8,5 @@
   <div class="price">
     <app-euro-display [value]="product.price"></app-euro-display>
   </div>
-  <app-button label="Bestellen" *ngIf="product.price > 0" (notify)="notify.emit()"></app-button>
+  <app-button color="orange" label="Bestellen" *ngIf="product.price > 0" (notify)="notify.emit()"></app-button>
 </div>
