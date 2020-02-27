@@ -17,6 +17,7 @@ import {registerLocaleData} from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { EuroDisplayComponent } from './shared/euro-display/euro-display.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ButtonComponent } from './shared/button/button.component';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -32,7 +33,8 @@ registerLocaleData(localeDe);
     SnacksOverviewComponent,
     SchnitzelOverviewComponent,
     EuroDisplayComponent,
-    CartComponent
+    CartComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
