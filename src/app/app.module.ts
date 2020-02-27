@@ -20,6 +20,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -43,7 +45,9 @@ registerLocaleData(localeDe);
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,16 @@
 <form class="contact-form" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div class="text-input">
-    <div>
-      <label for="name">Ihr Name:</label>
-    </div>
-    <div>
-      <input id="name" type="text" formControlName="name">
-    </div>
+  <div class="name">
+    <mat-form-field>
+      <mat-label>Ihr Name</mat-label>
+      <input matInput placeholder="Max Mustermann"/>
+    </mat-form-field>
   </div>
 
-  <div class="text-input">
-    <div>
-      <label for="message">Ihre Nachricht:</label>
-    </div>
-    <div>
-      <input type="text" id="message" formControlName="message">
-    </div>
+  <div class="message">
+    <mat-form-field>
+      <mat-label>Ihre Nachricht</mat-label>
+      <input matInput placeholder="Hallo, ..."/>
+    </mat-form-field>
   </div>
 
   <div class="category-select">

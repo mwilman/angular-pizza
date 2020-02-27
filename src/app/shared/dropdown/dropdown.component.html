@@ -1,5 +1,8 @@
 <div class="custom-select">
-    <select (change)="handleChange($event)">
-      <option *ngFor="let option of options">{{option}}</option>
-    </select>
+  <mat-form-field>
+    <mat-label>Kategorie</mat-label>
+      <select matNativeControl (change)="handleChange($event)" name="category">
+        <option *ngFor="let option of options">{{option}}</option>
+      </select>
+  </mat-form-field>
 </div>
