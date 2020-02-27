@@ -8,6 +8,8 @@ import {FormBuilder, Validators} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
+  options = ['Allgemein', 'Technik', 'Bestellung'];
+
   constructor(private fb: FormBuilder) { }
 
   form = this.fb.group({

@@ -1,9 +1,5 @@
 <div class="custom-select">
-  <label>
-    Kategorie
     <select (change)="handleChange($event)">
-      <option>pizza</option>
-      <option>pasta</option>
+      <option *ngFor="let option of options">{{option}}</option>
     </select>
-  </label>
 </div>

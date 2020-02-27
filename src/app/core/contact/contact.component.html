@@ -1,21 +1,24 @@
 <form class="contact-form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="text-input">
-    <label>
-      Name:
-      <input type="text" formControlName="name">
-    </label>
+    <div>
+      <label for="name">Ihr Name:</label>
+    </div>
+    <div>
+      <input id="name" type="text" formControlName="name">
+    </div>
   </div>
 
   <div class="text-input">
-    <label>
-      Ihre Nachricht:
-      <input type="text" formControlName="message">
-    </label>
+    <div>
+      <label for="message">Ihre Nachricht:</label>
+    </div>
+    <div>
+      <input type="text" id="message" formControlName="message">
+    </div>
   </div>
 
-  <app-dropdown (notify)="onChange($event)"></app-dropdown>
-
-  <div class="button">
-    <button type="submit" [disabled]="!form.valid">Submit</button>
+  <div class="category-select">
+    <app-dropdown [options]="options" (notify)="onChange($event)"></app-dropdown>
   </div>
+  <app-button label="Senden" (notify)="onSubmit()" color="orange"></app-button>
 </form>

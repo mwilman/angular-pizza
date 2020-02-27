@@ -9,7 +9,7 @@ export class ButtonComponent implements OnInit {
 
   constructor() { }
   @Input() label: string;
-  @Input() color?: string;
+  @Input() color: 'chocolate' | 'indianred' | 'orange';
   @Output() notify = new EventEmitter();
 
   ngOnInit(): void {
