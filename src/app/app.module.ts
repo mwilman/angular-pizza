@@ -10,7 +10,7 @@ import { PastaOverviewComponent } from './components/pasta-overview/pasta-overvi
 import {ItemRowComponent} from './components/item-row/item-row.component';
 import { ImprintComponent } from './core/imprint/imprint.component';
 import { ContactComponent } from './core/contact/contact.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SnacksOverviewComponent } from './components/snacks/snacks-overview.component';
 import { SchnitzelOverviewComponent } from './components/schnitzel-overview/schnitzel-overview.component';
 import {registerLocaleData} from '@angular/common';
@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { TextInputComponent } from './shared/text-input/text-input.component';
+import {MatButtonModule} from '@angular/material/button';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -49,7 +50,9 @@ registerLocaleData(localeDe);
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,8 +9,9 @@ export class ButtonComponent implements OnInit {
 
   constructor() { }
   @Input() label: string;
-  @Input() color: 'chocolate' | 'indianred' | 'orange';
+  @Input() color: 'primary' | 'accent' | 'warn';
   @Output() notify = new EventEmitter();
+  @Input() disabled: boolean;
 
   ngOnInit(): void {
   }

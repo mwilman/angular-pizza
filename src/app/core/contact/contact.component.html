@@ -18,6 +18,13 @@
   </div>
 
   <div class="submit-button flex-row space-between">
-    <app-button label="Senden" (notify)="onSubmit()" color="orange"></app-button>
+    <app-button [disabled]="!this.form.valid" label="Senden" (notify)="onSubmit()" color="primary"></app-button>
+  </div>
+
+  <div *ngIf="sended">
+    <span>Ihre Nachricht wurde gesendet!</span>
+    <div>
+      {{this.form.value | json}}
+    </div>
   </div>
 </form>

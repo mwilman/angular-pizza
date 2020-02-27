@@ -17,13 +17,14 @@ export class ContactComponent implements OnInit {
     message: ['', Validators.required],
     category: ['allgemein'],
   });
+  sended = false;
 
   ngOnInit(): void {
   }
 
   onSubmit() {
     console.log(this.form.value);
-    this.form.get('message').patchValue('Kleiner!');
+    this.sended = true;
   }
 
   onChange(e) {

@@ -1,3 +1,1 @@
-<div class="button" [ngClass]="color" (click)="notify.emit()">
-  <span>{{label}}</span>
-</div>
+<button mat-raised-button color="{{color}}" (click)="notify.emit()" [disabled]="disabled">{{label}}</button>
