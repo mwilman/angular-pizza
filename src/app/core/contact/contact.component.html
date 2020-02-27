@@ -2,20 +2,21 @@
   <div class="name">
     <mat-form-field>
       <mat-label>Ihr Name</mat-label>
-      <input matInput placeholder="Max Mustermann"/>
+      <input matInput placeholder="Max Mustermann" formControlName="name"/>
     </mat-form-field>
   </div>
 
   <div class="message">
     <mat-form-field>
       <mat-label>Ihre Nachricht</mat-label>
-      <input matInput placeholder="Hallo, ..."/>
+      <input matInput placeholder="Hallo, ..." formControlName="message"/>
     </mat-form-field>
   </div>
 
   <div class="category-select">
     <app-dropdown [options]="options" (notify)="onChange($event)"></app-dropdown>
   </div>
+
   <div class="submit-button flex-row space-between">
     <app-button label="Senden" (notify)="onSubmit()" color="orange"></app-button>
   </div>
