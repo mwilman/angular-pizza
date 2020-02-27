@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
   form = this.fb.group({
     name: [''],
     message: ['', Validators.required],
+    category: ['pizza'],
   });
 
   ngOnInit(): void {
@@ -23,4 +24,9 @@ export class ContactComponent implements OnInit {
     this.form.get('message').patchValue('Kleiner!');
   }
 
+  onChange(e) {
+    console.log(e);
+    this.form.get('category').setValue(e);
+    console.log(this.form.value);
+  }
 }

@@ -1,7 +1,9 @@
 <div class="custom-select">
-  <select (change)="handleChange($event)">
-    <option value="" disabled>Größe</option>
-    <option>Klein</option>
-    <option>Groß</option>
-  </select>
+  <label>
+    Kategorie
+    <select (change)="handleChange($event)">
+      <option>pizza</option>
+      <option>pasta</option>
+    </select>
+  </label>
 </div>

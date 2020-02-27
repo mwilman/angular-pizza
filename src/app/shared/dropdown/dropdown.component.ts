@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -14,9 +13,7 @@ export class DropdownComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleChange(e: Event) {
-    console.log('first');
-    console.log(e.target);
-    this.notify.emit(e.target);
+  handleChange(e) {
+    this.notify.emit(e.target.value);
   }
 }
