@@ -19,6 +19,7 @@ import { EuroDisplayComponent } from './shared/euro-display/euro-display.compone
 import { CartComponent } from './components/cart/cart.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -41,7 +42,8 @@ registerLocaleData(localeDe);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
