@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Product} from '../item-row/product';
 import {CartService} from '../../services/cart/cart.service';
+import {MatTable} from '@angular/material/table';
 
 @Component({
   selector: 'app-cart',
@@ -9,6 +10,7 @@ import {CartService} from '../../services/cart/cart.service';
 })
 export class CartComponent implements OnInit {
 
+  @ViewChild(MatTable) table: MatTable<Product>;
   constructor(public cartService: CartService) { }
 
   products: Product[] = this.cartService.getItems();
@@ -21,6 +23,7 @@ export class CartComponent implements OnInit {
 
   deleteItem(product: Product) {
     this.cartService.deleteItem(product);
+    this.table.renderRows();
     console.log('removing');
     console.log(product);
   }
