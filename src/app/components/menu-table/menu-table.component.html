@@ -6,8 +6,7 @@
 
   <ng-container matColumnDef="description">
     <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
-    >
-    <mat-cell *matCellDef="let product">{{product.description}}</mat-cell>
+    <mat-cell class="bold" *matCellDef="let product">{{product.description}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="price">
