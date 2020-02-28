@@ -9,9 +9,11 @@ import {CartService} from '../../services/cart/cart.service';
 })
 export class CartComponent implements OnInit {
 
+  constructor(public cartService: CartService) { }
+
   products: Product[] = this.cartService.getItems();
 
-  constructor(public cartService: CartService) { }
+  columnsToDisplay = ['identifier', 'description', 'price', 'delete-button'];
 
   ngOnInit(): void {
   }
