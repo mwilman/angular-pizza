@@ -20,9 +20,11 @@
   <ng-container matColumnDef="buy-button">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let product">
-      <i (click)="onNotify(product)" class="material-icons">
-        shopping_cart
-      </i>
+      <button mat-button (click)="onNotify(product)">
+        <i class="material-icons">
+          shopping_cart
+        </i>
+      </button>
       <!--
       <app-button label="🛒" (notify)="onNotify(product)"></app-button>
       -->
