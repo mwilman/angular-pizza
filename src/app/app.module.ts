@@ -7,7 +7,6 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { PizzaOverviewComponent } from './components/pizza-overview/pizza-overview.component';
 import { PastaOverviewComponent } from './components/pasta-overview/pasta-overview.component';
-import {ItemRowComponent} from './components/item-row/item-row.component';
 import { ImprintComponent } from './core/imprint/imprint.component';
 import { ContactComponent } from './core/contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -25,12 +24,12 @@ import {MatInputModule} from '@angular/material/input';
 import { TextInputComponent } from './shared/text-input/text-input.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { MenuTableComponent } from './components/menu-table/menu-table.component';
 
 registerLocaleData(localeDe);
 @NgModule({
   declarations: [
     AppComponent,
-    ItemRowComponent,
     HeaderComponent,
     FooterComponent,
     PizzaOverviewComponent,
@@ -43,7 +42,8 @@ registerLocaleData(localeDe);
     CartComponent,
     ButtonComponent,
     DropdownComponent,
-    TextInputComponent
+    TextInputComponent,
+    MenuTableComponent
   ],
     imports: [
         BrowserModule,
