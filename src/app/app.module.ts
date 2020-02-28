@@ -25,6 +25,7 @@ import { TextInputComponent } from './shared/text-input/text-input.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { MenuTableComponent } from './components/menu-table/menu-table.component';
+import {MatIconModule} from '@angular/material/icon';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -45,17 +46,18 @@ registerLocaleData(localeDe);
     TextInputComponent,
     MenuTableComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        MatButtonModule,
-        MatTableModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatTableModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

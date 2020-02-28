@@ -22,9 +22,7 @@
     <mat-cell *matCellDef="let product">
       <div class="flex-row space-between">
         <button mat-button (click)="onOrder(product)">
-          <i class="material-icons">
-            shopping_cart
-          </i>
+          <mat-icon>shopping_cart</mat-icon>
         </button>
         <!--
         <app-button label="🛒" (notify)="onNotify(product)"></app-button>
