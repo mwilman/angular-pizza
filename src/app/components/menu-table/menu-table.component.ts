@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../item-row/product';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-menu-table',
@@ -11,13 +12,16 @@ export class MenuTableComponent implements OnInit {
 
   @Input() products: Product[];
   @Output() ordered = new EventEmitter();
-  constructor() { }
+  constructor(public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
 
   onOrder(product: Product) {
     console.log(product);
+    this.snackBar.open(product.description + ' wurde hinzugefügt', undefined, {
+      duration: 3000
+    });
     this.ordered.emit(product);
   }
 

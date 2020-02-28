@@ -25,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { MenuTableComponent } from './components/menu-table/menu-table.component';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -55,7 +56,8 @@ registerLocaleData(localeDe);
     FormsModule,
     MatButtonModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
