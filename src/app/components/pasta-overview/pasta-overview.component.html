@@ -19,7 +19,7 @@
   <ng-container matColumnDef="buy-button">
     <mat-header-cell *matHeaderCellDef>Kaufen</mat-header-cell>
     <mat-cell *matCellDef="let product">
-      <app-button color="accent" (notify)="onNotify(product)"></app-button>
+      <app-button label="🛒" (notify)="onNotify(product)"></app-button>
     </mat-cell>
   </ng-container>
 
