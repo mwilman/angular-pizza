@@ -5,7 +5,8 @@
   </ng-container>
 
   <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>>
+    <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
+    >
     <mat-cell *matCellDef="let product">{{product.description}}</mat-cell>
   </ng-container>
 
@@ -17,9 +18,14 @@
   </ng-container>
 
   <ng-container matColumnDef="buy-button">
-    <mat-header-cell *matHeaderCellDef>Kaufen</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let product">
+      <i (click)="onNotify(product)" class="material-icons">
+        shopping_cart
+      </i>
+      <!--
       <app-button label="🛒" (notify)="onNotify(product)"></app-button>
+      -->
     </mat-cell>
   </ng-container>
 
