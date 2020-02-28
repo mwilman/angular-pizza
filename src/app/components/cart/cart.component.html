@@ -29,7 +29,7 @@
       <mat-header-cell *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let product">
         <div class="flex-row space-between">
-          <button mat-button (click)="deleteItem(product)">
+          <button mat-icon-button color="warn" (click)="deleteItem(product)">
             <mat-icon>delete</mat-icon>
           </button>
           <!--
