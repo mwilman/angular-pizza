@@ -1,5 +1,28 @@
-<div class="space-between flex-column">
-  <div *ngFor="let product of products">
-    <app-item-row [product]="product" (notify)="onNotify(product)"></app-item-row>
-  </div>
-</div>
+<mat-table class="pasta-overview-table" [dataSource]="products">
+  <ng-container matColumnDef="identifier">
+    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{product.identifier}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>>
+    <mat-cell *matCellDef="let product">{{product.description}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <mat-header-cell *matHeaderCellDef>Preis</mat-header-cell>
+    <mat-cell *matCellDef="let product">
+      <app-euro-display [value]="product.price"></app-euro-display>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="buy-button">
+    <mat-header-cell *matHeaderCellDef>Kaufen</mat-header-cell>
+    <mat-cell *matCellDef="let product">
+      <app-button color="accent" (notify)="onNotify(product)"></app-button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+</mat-table>

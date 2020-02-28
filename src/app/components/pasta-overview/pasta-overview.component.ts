@@ -10,6 +10,7 @@ import {CartService} from '../../services/cart/cart.service';
 export class PastaOverviewComponent implements OnInit {
   products = products.filter(product => product.type === 'pasta');
 
+  columnsToDisplay = ['identifier', 'description', 'price'];
   constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
