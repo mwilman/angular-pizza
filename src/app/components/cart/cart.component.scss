@@ -1,19 +1,7 @@
-.row {
-  margin: 10px;
+mat-table {
+  width: 100%;
+}
 
-  .id {
-    width: 10%;
-  }
-
-  .description {
-    width: 70%;
-  }
-
-  .price {
-    width: 20%;
-  }
-
-  .id, .description, .price {
-    align-self: center;
-  }
+mat-footer-row {
+  font-weight: bold;
 }

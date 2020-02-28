@@ -2,7 +2,7 @@
   Bitte platzieren Sie erst erst Produkte in den Warenkorb! (Warenkorb leer)
 </p>
 <div *ngIf="products.length > 0">
-  <mat-table class="pasta-overview-table" [dataSource]="products">
+  <mat-table [dataSource]="products">
     <ng-container matColumnDef="identifier">
       <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
       <mat-cell *matCellDef="let product">{{product.identifier}}</mat-cell>
@@ -12,6 +12,7 @@
       <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
       >
       <mat-cell *matCellDef="let product">{{product.description}}</mat-cell>
+      <mat-footer-cell *matFooterCellDef>Gesamtsumme</mat-footer-cell>
     </ng-container>
 
     <ng-container matColumnDef="price">
@@ -19,6 +20,9 @@
       <mat-cell *matCellDef="let product">
         <app-euro-display [value]="product.price"></app-euro-display>
       </mat-cell>
+      <mat-footer-cell *matFooterCellDef>
+        <app-euro-display [value]="getTotalCost()"></app-euro-display>
+      </mat-footer-cell>
     </ng-container>
 
     <ng-container matColumnDef="delete-button">
@@ -39,6 +43,7 @@
 
     <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+    <mat-footer-row *matFooterRowDef="columnsToDisplayTotal"></mat-footer-row>
   </mat-table>
 </div>
 
