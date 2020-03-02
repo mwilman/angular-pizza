@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import {Product} from '../../components/item-row/product';
+import {Injectable} from '@angular/core';
 import {CartModel, ProductInCart} from '../../components/cart/model/cart.model';
 
 @Injectable({
@@ -10,10 +9,12 @@ export class CartService {
   cart: CartModel = {
     products: [],
   };
-  constructor() { }
+
+  constructor() {
+  }
 
   addToCart(product: ProductInCart) {
-    const searchResult = this.cart.products.find(value => value.product.identifier === product.product.identifier);
+    const searchResult = this.findProductInCart(product);
 
     if (searchResult) {
       searchResult.amount++;
@@ -26,15 +27,20 @@ export class CartService {
     return this.cart;
   }
 
-  deleteItem(product: ProductInCart) {
-    const index = this.cart.products.indexOf(product);
-    if (index > -1) {
-      this.cart.products.splice(index, 1);
+  deleteItem(item: ProductInCart) {
+    if (item.amount > 1) {
+      item.amount--;
+    } else {
+      this.cart.products = this.cart.products.filter(currentItem => currentItem.product.identifier !== item.product.identifier);
     }
   }
 
   clearCart() {
     this.cart.products = [];
     return this.cart;
+  }
+
+  findProductInCart(product: ProductInCart) {
+    return this.cart.products.find(value => value.product.identifier === product.product.identifier);
   }
 }
