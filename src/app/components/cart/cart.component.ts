@@ -16,6 +16,8 @@ export class CartComponent implements OnInit {
 
   products: CartModel = this.cartService.getItems();
 
+  // TODO: AddFormControl for Amount
+
   columnsToDisplay = ['identifier', 'description', 'amount', 'price', 'item_total', 'delete-button'];
   columnsToDisplayTotal = ['description', 'item_total'];
 
@@ -35,5 +37,10 @@ export class CartComponent implements OnInit {
 
   getTotalItemCost(item: ProductInCart) {
     return item.product.price * item.amount;
+  }
+
+  onChange(item, target) {
+    const amount = target.value;
+    this.cartService.updateAmount(item, amount);
   }
 }

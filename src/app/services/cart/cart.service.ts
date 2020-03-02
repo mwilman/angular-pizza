@@ -43,4 +43,8 @@ export class CartService {
   findProductInCart(product: ProductInCart) {
     return this.cart.products.find(value => value.product.identifier === product.product.identifier);
   }
+
+  updateAmount(item: ProductInCart, amount: number) {
+    item.amount = amount;
+  }
 }
