@@ -16,8 +16,8 @@ export class CartComponent implements OnInit {
 
   products: CartModel = this.cartService.getItems();
 
-  columnsToDisplay = ['identifier', 'description', 'price', 'delete-button'];
-  columnsToDisplayTotal = ['description', 'price'];
+  columnsToDisplay = ['identifier', 'description', 'amount', 'price', 'item_total', 'delete-button'];
+  columnsToDisplayTotal = ['description', 'item_total'];
 
   ngOnInit(): void {
     console.log(this.products);
@@ -31,5 +31,9 @@ export class CartComponent implements OnInit {
   getTotalCost() {
     return this.products.products.map(productInCart => productInCart.product.price * productInCart.amount)
       .reduce((acc, value) => acc + value, 0);
+  }
+
+  getTotalItemCost(item: ProductInCart) {
+    return item.product.price * item.amount;
   }
 }

@@ -3,14 +3,18 @@
 </p>
 <div *ngIf="products.products.length > 0">
   <mat-table [dataSource]="products.products">
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef>Anzahl</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{item.amount}}</mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="identifier">
-      <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef>Artikelnummer</mat-header-cell>
       <mat-cell *matCellDef="let item">{{item.product.identifier}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
-      >
       <mat-cell *matCellDef="let item">{{item.product.description}}</mat-cell>
       <mat-footer-cell *matFooterCellDef>Gesamtsumme</mat-footer-cell>
     </ng-container>
@@ -19,6 +23,13 @@
       <mat-header-cell *matHeaderCellDef>Preis</mat-header-cell>
       <mat-cell *matCellDef="let item">
         <app-euro-display [value]="item.product.price"></app-euro-display>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="item_total">
+      <mat-header-cell *matHeaderCellDef>Summe</mat-header-cell>
+      <mat-cell *matCellDef="let item">
+        <app-euro-display [value]="getTotalItemCost(item)"></app-euro-display>
       </mat-cell>
       <mat-footer-cell *matFooterCellDef>
         <app-euro-display [value]="getTotalCost()"></app-euro-display>
