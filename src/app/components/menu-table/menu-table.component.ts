@@ -18,7 +18,6 @@ export class MenuTableComponent implements OnInit {
   }
 
   onOrder(product: Product) {
-    console.log(product);
     this.snackBar.open(product.description + ' wurde hinzugefügt', undefined, {
       duration: 3000
     });

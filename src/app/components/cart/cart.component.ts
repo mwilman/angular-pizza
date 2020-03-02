@@ -24,8 +24,6 @@ export class CartComponent implements OnInit {
   deleteItem(product: Product) {
     this.cartService.deleteItem(product);
     this.table.renderRows();
-    console.log('removing');
-    console.log(product);
   }
 
   getTotalCost() {

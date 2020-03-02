@@ -28,8 +28,6 @@ export class ContactComponent implements OnInit {
   }
 
   onChange(e) {
-    console.log(e);
     this.form.get('category').setValue(e);
-    console.log(this.form.value);
   }
 }

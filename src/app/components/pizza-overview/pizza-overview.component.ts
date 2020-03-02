@@ -16,6 +16,5 @@ export class PizzaOverviewComponent implements OnInit {
 
   onNotify(product) {
     this.cartService.addToCart(product);
-    console.log(product);
   }
 }

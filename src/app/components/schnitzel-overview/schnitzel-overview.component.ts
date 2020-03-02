@@ -17,6 +17,5 @@ export class SchnitzelOverviewComponent implements OnInit {
 
   onNotify(product) {
     this.cartService.addToCart(product);
-    console.log(product);
   }
 }
