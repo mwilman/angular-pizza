@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../item-row/product';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {ProductInCart} from '../cart/model/cart.model';
 
 @Component({
   selector: 'app-menu-table',
@@ -17,11 +18,17 @@ export class MenuTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onOrder(product: Product) {
+  onOrder(product: Product, note?: string) {
     this.snackBar.open(product.description + ' wurde hinzugefügt', undefined, {
       duration: 3000
     });
-    this.ordered.emit(product);
+    const productInCart: ProductInCart = {
+      amount: 1,
+      product,
+      note
+    };
+    console.log(productInCart);
+    this.ordered.emit(productInCart);
   }
 
 }
