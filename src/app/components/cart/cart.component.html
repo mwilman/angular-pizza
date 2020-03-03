@@ -22,18 +22,6 @@
       <mat-cell *matCellDef="let item">{{item.product.identifier}}</mat-cell>
     </ng-container>
 
-    <!--
-    <ng-container matColumnDef="size">
-      <mat-header-cell *matHeaderCellDef>Größe</mat-header-cell>
-      <mat-cell *matCellDef="let item">
-        <mat-select *ngIf="item.product.price_small">
-          <option value="Klein"></option>
-          <option value="Groß"></option>
-        </mat-select>
-      </mat-cell>
-    </ng-container>
-    -->
-
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
       <mat-cell *matCellDef="let item">{{item.product.description}}</mat-cell>

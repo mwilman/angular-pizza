@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {CartModel, ProductInCart} from '../../components/cart/model/cart.model';
-import {SizeType} from '../../components/products';
 
 @Injectable({
   providedIn: 'root'

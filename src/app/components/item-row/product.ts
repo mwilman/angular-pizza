@@ -1,8 +1,7 @@
 export interface Product {
   identifier: string;
   description: string;
-  price_small?: number;
-  price_big: number;
+  price: number;
   type: ProductType;
 }
 

@@ -2,9 +2,6 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../item-row/product';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {ProductInCart} from '../cart/model/cart.model';
-import {SizeType} from '../products';
-import {MatSelectChange} from '@angular/material/select';
-import {MatOption} from '@angular/material/core';
 
 @Component({
   selector: 'app-menu-table',
@@ -12,7 +9,7 @@ import {MatOption} from '@angular/material/core';
   styleUrls: ['./menu-table.component.scss']
 })
 export class MenuTableComponent implements OnInit {
-  columnsToDisplay = ['identifier', 'size', 'description', 'price', 'buy-button'];
+  columnsToDisplay = ['identifier', 'description', 'price', 'buy-button'];
 
   @Input() products: Product[];
   @Output() ordered = new EventEmitter();
@@ -21,26 +18,17 @@ export class MenuTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onOrder(product: Product, size?: SizeType, note?: string) {
+  onOrder(product: Product, note?: string) {
     this.snackBar.open(product.description + ' wurde hinzugefügt', undefined, {
       duration: 3000
     });
     const productInCart: ProductInCart = {
       amount: 1,
       product,
-      size,
       note
     };
     console.log(productInCart);
     this.ordered.emit(productInCart);
-  }
-
-  selected(event: MatSelectChange) {
-    const selectedData = {
-      text: (event.source.selected as MatOption).viewValue,
-      value: event.source.value
-    };
-    console.log(selectedData);
   }
 
 }

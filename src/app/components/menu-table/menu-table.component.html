@@ -12,17 +12,7 @@
   <ng-container matColumnDef="price">
     <mat-header-cell *matHeaderCellDef>Preis</mat-header-cell>
     <mat-cell *matCellDef="let product">
-      <app-euro-display [value]="product.price_small"></app-euro-display>
-    </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="size">
-    <mat-header-cell *matHeaderCellDef>Größe</mat-header-cell>
-    <mat-cell *matCellDef="let product">
-      <mat-select *ngIf="product.price_small" value="small" (selectionChange)="selected($event)">
-        <mat-option value="small">Klein</mat-option>
-        <mat-option value="big">Groß</mat-option>
-      </mat-select>
+      <app-euro-display [value]="product.price"></app-euro-display>
     </mat-cell>
   </ng-container>
 

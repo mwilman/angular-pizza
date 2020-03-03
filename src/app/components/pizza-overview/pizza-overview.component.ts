@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { products } from '../products';
 import {CartService} from '../../services/cart/cart.service';
-import {ProductInCart} from '../cart/model/cart.model';
 
 @Component({
   selector: 'app-pizza-overview',
@@ -15,8 +14,7 @@ export class PizzaOverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onNotify(product: ProductInCart) {
-    // product.size = size;
+  onNotify(product) {
     this.cartService.addToCart(product);
   }
 }
