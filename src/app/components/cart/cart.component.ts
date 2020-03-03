@@ -31,12 +31,12 @@ export class CartComponent implements OnInit {
   }
 
   getTotalCost() {
-    return this.products.products.map(productInCart => productInCart.product.price * productInCart.amount)
+    return this.products.products.map(productInCart => productInCart.product.price_big * productInCart.amount)
       .reduce((acc, value) => acc + value, 0);
   }
 
   getTotalItemCost(item: ProductInCart) {
-    return item.product.price * item.amount;
+    return item.product.price_big * item.amount;
   }
 
   onChange(item, target) {
