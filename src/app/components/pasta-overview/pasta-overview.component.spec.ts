@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PastaOverviewComponent } from './pasta-overview.component';
 
@@ -6,7 +6,7 @@ describe('PastaOverviewComponent', () => {
   let component: PastaOverviewComponent;
   let fixture: ComponentFixture<PastaOverviewComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PastaOverviewComponent ]
     })
