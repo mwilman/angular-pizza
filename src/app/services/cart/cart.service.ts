@@ -13,7 +13,7 @@ export class CartService {
   constructor() {
   }
 
-  addToCart(product: ProductInCart) {
+   addToCart(product: ProductInCart) {
     const searchResult = this.findProductInCart(product);
 
     if (searchResult) {

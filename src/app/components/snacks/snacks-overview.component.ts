@@ -8,8 +8,8 @@ import { products } from '../products';
   styleUrls: ['./snacks-overview.component.scss']
 })
 export class SnacksOverviewComponent implements OnInit {
-
   products = products.filter(product => product.type === 'snacks');
+
   constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
