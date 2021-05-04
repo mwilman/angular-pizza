@@ -26,6 +26,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MenuTableComponent } from './components/menu-table/menu-table.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { AllOverviewComponent } from './components/all-overview/all-overview.component';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -44,7 +45,8 @@ registerLocaleData(localeDe);
     ButtonComponent,
     DropdownComponent,
     TextInputComponent,
-    MenuTableComponent
+    MenuTableComponent,
+    AllOverviewComponent
   ],
   imports: [
     BrowserModule,
