@@ -23,7 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import { TextInputComponent } from './shared/text-input/text-input.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
-import { MenuTableComponent } from './components/menu-table/menu-table.component';
+import { MenuCategoryTableComponent } from './components/menu-category-table/menu-category-table.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AllOverviewComponent } from './components/all-overview/all-overview.component';
@@ -45,7 +45,7 @@ registerLocaleData(localeDe);
     ButtonComponent,
     DropdownComponent,
     TextInputComponent,
-    MenuTableComponent,
+    MenuCategoryTableComponent,
     AllOverviewComponent
   ],
   imports: [

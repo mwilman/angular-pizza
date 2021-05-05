@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { MenuTableComponent } from './menu-table.component';
+import { MenuCategoryTableComponent } from './menu-category-table.component';
 
 describe('MenuTableComponent', () => {
-  let component: MenuTableComponent;
-  let fixture: ComponentFixture<MenuTableComponent>;
+  let component: MenuCategoryTableComponent;
+  let fixture: ComponentFixture<MenuCategoryTableComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MenuTableComponent ]
+      declarations: [ MenuCategoryTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MenuTableComponent);
+    fixture = TestBed.createComponent(MenuCategoryTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,11 +4,11 @@ import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 import {ProductInCart} from '../cart/model/cart.model';
 
 @Component({
-  selector: 'app-menu-table',
-  templateUrl: './menu-table.component.html',
-  styleUrls: ['./menu-table.component.scss']
+  selector: 'app-menu-category-table',
+  templateUrl: './menu-category-table.component.html',
+  styleUrls: ['./menu-category-table.component.scss']
 })
-export class MenuTableComponent implements OnInit {
+export class MenuCategoryTableComponent implements OnInit {
   columnsToDisplay = ['identifier', 'description', 'price', 'buy-button'];
 
   @Input() products: Product[];
