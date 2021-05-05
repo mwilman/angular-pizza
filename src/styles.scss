@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import 'styles/colors';
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -19,6 +20,22 @@
 
 a {
   text-decoration-line: none;
+}
+
+// mat-snackbar
+snack-bar-container {
+  simple-snack-bar {
+    span {
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  &.success {
+    background-color: $success-color;
+    color: $font-color-dark;
+  }
 }
 
 html, body { height: 100%; }

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../item-row/product';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 import {ProductInCart} from '../cart/model/cart.model';
 
 @Component({
@@ -19,8 +19,10 @@ export class MenuTableComponent implements OnInit {
   }
 
   onOrder(product: Product, note?: string) {
+
     this.snackBar.open(product.description + ' wurde hinzugefügt', undefined, {
-      duration: 3000
+      duration: 300,
+      panelClass: 'success',
     });
     const productInCart: ProductInCart = {
       amount: 1,
