@@ -25,9 +25,16 @@ export class CartComponent implements OnInit {
     console.log(this.products);
   }
 
+  reduceAmount(item: ProductInCart) {
+    this.cartService.reduceAmount(item);
+  }
+
+  increaseAmount(item: ProductInCart) {
+    this.cartService.addToCart(item);
+  }
+
   deleteItem(product: ProductInCart) {
     this.cartService.deleteItem(product);
-    this.table.renderRows();
   }
 
   getTotalCost() {
@@ -39,7 +46,7 @@ export class CartComponent implements OnInit {
     return item.product.price * item.amount;
   }
 
-  onChange(item, target) {
+  onChange(item: ProductInCart, target) {
     const amount = target.value;
     this.cartService.updateAmount(item, amount);
   }

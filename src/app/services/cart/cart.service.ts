@@ -27,12 +27,16 @@ export class CartService {
     return this.cart;
   }
 
-  deleteItem(item: ProductInCart) {
+  reduceAmount(item: ProductInCart) {
     if (item.amount > 1) {
       item.amount--;
     } else {
-      this.cart.products = this.cart.products.filter(currentItem => currentItem.product.identifier !== item.product.identifier);
+      this.deleteItem(item);
     }
+  }
+
+  deleteItem(item: ProductInCart) {
+    this.cart.products = this.cart.products.filter(currentItem => currentItem.product.identifier !== item.product.identifier);
   }
 
   clearCart() {
