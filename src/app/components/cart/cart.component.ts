@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
   // TODO: AddFormControl for Amount
 
-  columnsToDisplay = ['identifier', 'description', 'amount', 'price', 'item_total', 'delete-button'];
+  columnsToDisplay = ['amount', 'identifier', 'description', 'price', 'item_total', 'delete-button'];
   columnsToDisplayTotal = ['description', 'item_total'];
 
   ngOnInit(): void {

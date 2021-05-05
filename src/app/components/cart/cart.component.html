@@ -1,6 +1,8 @@
-<p *ngIf="products.products.length === 0">
-  Bitte platzieren Sie erst erst Produkte in den Warenkorb! (Warenkorb leer)
-</p>
+<div class="no-items" *ngIf="products.products.length === 0">
+  <p>
+    Ihr Warenkorb ist leer. Bitte platzieren Sie erst Produkte in den Warenkorb!
+  </p>
+</div>
 <div *ngIf="products.products.length > 0">
   <mat-table [dataSource]="products.products">
     <ng-container matColumnDef="amount">
