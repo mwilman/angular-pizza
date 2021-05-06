@@ -1,16 +1,16 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable} from '@angular/core';
 import {CartModel, ProductInCart} from '../../components/cart/model/cart.model';
+import {SESSION_STORAGE, WebStorageService} from 'ngx-webstorage-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  cart: CartModel = {
-    products: [],
-  };
+  public cart: CartModel;
 
-  constructor() {
+  constructor(@Inject(SESSION_STORAGE) private storageService: WebStorageService ) {
+    this.cart = this.storageService.get('cart') ? this.storageService.get('cart') : [];
   }
 
    addToCart(product: ProductInCart) {
@@ -21,10 +21,11 @@ export class CartService {
     } else {
       this.cart.products.push(product);
     }
+    this.updateStorage();
   }
 
-  getItems() {
-    return this.cart;
+  getItems(): CartModel {
+    return this.storageService.get('cart');
   }
 
   reduceAmount(item: ProductInCart) {
@@ -33,14 +34,17 @@ export class CartService {
     } else {
       this.deleteItem(item);
     }
+    this.updateStorage();
   }
 
   deleteItem(item: ProductInCart) {
     this.cart.products = this.cart.products.filter(currentItem => currentItem.product.identifier !== item.product.identifier);
+    this.updateStorage();
   }
 
   clearCart() {
     this.cart.products = [];
+    this.updateStorage();
     return this.cart;
   }
 
@@ -50,5 +54,10 @@ export class CartService {
 
   updateAmount(item: ProductInCart, amount: number) {
     item.amount = amount;
+    this.updateStorage();
+  }
+
+  updateStorage() {
+    this.storageService.set('cart', this.cart);
   }
 }

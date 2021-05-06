@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   @ViewChild(MatTable) table: MatTable<Product>;
   constructor(public cartService: CartService) { }
 
-  products: CartModel = this.cartService.getItems();
+  products: CartModel = this.cartService.cart;
 
   // TODO: AddFormControl for Amount
 
