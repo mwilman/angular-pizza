@@ -11,7 +11,7 @@ export class CartService {
   public cart: CartModel;
 
   constructor(@Inject(SESSION_STORAGE) private storageService: WebStorageService ) {
-    this.cart = this.storageService.get('cart') ? this.storageService.get('cart') : [];
+    this.cart = this.storageService.get('cart') ? this.storageService.get('cart') : {products: []};
   }
 
    addToCart(product: ProductInCart) {
