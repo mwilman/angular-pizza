@@ -7,6 +7,7 @@ import {SESSION_STORAGE, WebStorageService} from 'ngx-webstorage-service';
 })
 export class CartService {
 
+  // TODO Observable
   public cart: CartModel;
 
   constructor(@Inject(SESSION_STORAGE) private storageService: WebStorageService ) {
