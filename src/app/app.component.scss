@@ -1,7 +1,28 @@
 #root {
-  background: white;
+  background: powderblue;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+  gap: 0 0;
+  grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer";
 }
 
 .content {
-  padding: 0 10px 130px;
+  grid-area: content;
+  background-color: white;
+}
+
+app-header {
+  grid-area: header;
+}
+
+app-footer {
+  grid-area: footer;
+}
+
+app-side-menu {
+  grid-area: sidebar;
 }
