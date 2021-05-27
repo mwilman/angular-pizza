@@ -49,3 +49,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: "Chalky";
+  src: url(./assets/fonts/Chalky.otf) format("truetype");
+}
+@font-face {
+  font-family: "FancyChalky";
+  src: url(./assets/fonts/fancy-chalk.ttf) format("truetype");
+}
