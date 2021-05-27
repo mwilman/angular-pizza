@@ -1,3 +1,12 @@
 .bold {
   font-weight: bold;
 }
+
+.mat-table {
+  background: transparent;
+  font-family: "Chalky", sans-serif;
+  .mat-cell, .mat-header-cell {
+    color: white;
+    font-size: 20px;
+  }
+}

@@ -14,12 +14,11 @@
   justify-content: stretch;
   align-items: stretch;
   background-size: cover;
+  color: white;
 }
 
 .content {
   grid-area: content;
-  background-color: white;
-  opacity: 0.8;
 }
 
 app-header {

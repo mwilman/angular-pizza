@@ -52,9 +52,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @font-face {
   font-family: "Chalky";
-  src: url(./assets/fonts/Chalky.otf) format("truetype");
+  src: url(./assets/fonts/chalky.otf) format("truetype");
 }
+
 @font-face {
   font-family: "FancyChalky";
   src: url(./assets/fonts/fancy-chalk.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ClementineSketch";
+  src: url(./assets/fonts/clementine-sketch.ttf) format("truetype");
 }
