@@ -1,14 +1,21 @@
-<nav class="header flex-row space-between">
+<nav class="header flex-row align-items-center">
+  <div class="placeholder"></div>
+
   <div class="categories">
     <app-button color=accent label="Pizza" routerLink="pizza"></app-button>
     <app-button color="accent" label="Nudelgerichte" routerLink="pasta"></app-button>
     <app-button color="accent" label="Schnitzel" routerLink="schnitzel"></app-button>
     <app-button color="accent" label="Snacks" routerLink="snacks"></app-button>
-    <app-button color="accent" label="Zum Warenkorb" routerLink="cart"></app-button>
   </div>
-  <div class="nav-bar-brand">
-    <a>
-      <img src="../../../assets/images/pizza2.svg" alt="a brand logo with a pizza">
-    </a>
+
+  <div class="right-items flex-row align-items-center">
+    <div class="cart">
+      <app-button color="accent" label="Zum Warenkorb" routerLink="cart"></app-button>
+    </div>
+    <div class="brand">
+      <a>
+        <img src="../../../assets/images/pizza2.svg" alt="a brand logo with a pizza">
+      </a>
+    </div>
   </div>
 </nav>
