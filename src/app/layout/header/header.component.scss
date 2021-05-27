@@ -3,8 +3,21 @@
   height: 100%;
   width: 100%;
   align-items: center;
+
+  .categories {
+    width: 70%;
+  }
+
+  .nav-bar-brand {
+    height: 56px;
+    cursor: pointer;
+  }
 }
 
 app-button {
     min-width: 150px;
+}
+
+img {
+  height: 100%
 }
