@@ -1,14 +1,10 @@
 .header {
-  margin-bottom: 20px;
   background: cornflowerblue;
-  padding: 30px 50px;
-  flex-wrap: wrap-reverse;
-
-  @media (max-width: 723px) {
-    padding: 0 50px;
-  }
+  height: 100%;
+  width: 100%;
+  align-items: center;
 }
 
 app-button {
-    width: 150px;
+    min-width: 150px;
 }
