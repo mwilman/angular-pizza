@@ -10,7 +10,7 @@
 
   <div class="right-items flex-row align-items-center">
     <div class="cart">
-      <app-button color="accent" label="Zum Warenkorb" routerLink="cart"></app-button>
+      <app-button [matBadge]="amount" color="accent" label="Zum Warenkorb" routerLink="cart"></app-button>
     </div>
     <div class="brand">
       <a>

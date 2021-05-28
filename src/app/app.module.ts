@@ -28,6 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AllOverviewComponent } from './components/all-overview/all-overview.component';
 import { SideMenuComponent } from './layout/side-menu/side-menu.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -50,19 +51,20 @@ registerLocaleData(localeDe);
     AllOverviewComponent,
     SideMenuComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatTableModule,
-    MatIconModule,
-    MatSnackBarModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatTableModule,
+        MatIconModule,
+        MatSnackBarModule,
+        MatBadgeModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -29,6 +29,10 @@ export class CartService {
     return this.storageService.get('cart');
   }
 
+  getAmount(): number {
+    return this.cart.products.length;
+  }
+
   reduceAmount(item: ProductInCart) {
     if (item.amount > 1) {
       item.amount--;
