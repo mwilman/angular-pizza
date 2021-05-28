@@ -2,9 +2,33 @@
   background: cornflowerblue;
   height: 100%;
   width: 100%;
-  align-items: center;
+
+  .placeholder {
+    width: 15%;
+    flex-shrink: 0;
+  }
+
+  .categories {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .right-items {
+    width: 15%;
+    justify-content: space-between;
+    flex-shrink: 0;
+    .brand {
+      height: 60px;
+      cursor: pointer;
+    }
+  }
 }
 
 app-button {
     min-width: 150px;
+}
+
+img {
+  height: 100%
 }
