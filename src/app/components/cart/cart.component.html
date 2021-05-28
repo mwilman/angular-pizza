@@ -8,7 +8,7 @@
     <ng-container matColumnDef="amount">
       <mat-header-cell *matHeaderCellDef>Anzahl</mat-header-cell>
       <mat-cell *matCellDef="let item">
-        <button mat-icon-button color="warn" (click)="reduceAmount(item)">
+        <button mat-icon-button (click)="reduceAmount(item)">
           <mat-icon>remove_circle</mat-icon>
         </button>
 
@@ -21,7 +21,7 @@
 
         />
 
-        <button mat-icon-button color="warn" (click)="increaseAmount(item)">
+        <button mat-icon-button (click)="increaseAmount(item)">
           <mat-icon>add_circle</mat-icon>
         </button>
       </mat-cell>

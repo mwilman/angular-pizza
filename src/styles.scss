@@ -51,12 +51,21 @@ input[type=number]::-webkit-outer-spin-button {
   background: transparent;
   font-family: "Chalky", sans-serif;
 
-  .mat-row, .mat-header-row {
+  .mat-row, .mat-header-row, .mat-footer-row {
     border-color: #ffffff80;
-    .mat-cell, .mat-header-cell {
+    .mat-cell, .mat-header-cell, .mat-footer-cell {
       color: white;
       font-size: 20px;
     }
+  }
+
+  .mat-column-delete-button, .mat-column-buy-button {
+    max-width: 5%;
+  }
+
+  .mat-column-description {
+    flex-grow: 2;
+    justify-content: center;
   }
 }
 
