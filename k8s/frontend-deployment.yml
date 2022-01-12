@@ -1,25 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-deployment
+  labels:
+    app: pizza-angular
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: pizza-angular
-      tier: frontend
-      track: stable
-  replicas: 1
   template:
     metadata:
       labels:
         app: pizza-angular
-        tier: frontend
-        track: stable
     spec:
       containers:
-        - name: nginx
-          image: "mwilmanbag/pizza-angular:v1"
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/usr/sbin/nginx","-s","quit"]
+        - name: pizza-angular
+          image: mwilmanbag/pizza-angular:v1
+          ports:
+            - containerPort: 80
