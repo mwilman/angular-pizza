@@ -17,5 +17,6 @@ spec:
       containers:
         - name: pizza-angular
           image: mwilmanbag/pizza-angular:v1
+          imagePullPolicy: Always
           ports:
             - containerPort: 80

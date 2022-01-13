@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: frontend-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: pizza-angular
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 80
+      nodePort: 31000
