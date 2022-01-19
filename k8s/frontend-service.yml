@@ -8,6 +8,6 @@ spec:
     app: pizza-angular
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: 31000
+      port: 80 # Abstrakter Port für den Service. Der Service hört auf diesen Port. Kann sich vom Container Port unterscheiden, container port hat mit dem gar nix zu tun. Kann egal welcher sein, auf dem andere Pods ihn erreichen können
+      targetPort: 80 # Jeder Pod hört auf diesen Port. Der Port auf dem der container traffic aktzeptiert. Kann sich vom Container Port unterscheiden..
+      nodePort: 31000 # Auf diesen Port kann ich aus dem internet zugreifen. beispiel: localhost:31000

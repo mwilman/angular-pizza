@@ -8,5 +8,5 @@ spec:
     app: pizza-angular
   ports:
     - protocol: TCP
-      port: 8083
-      targetPort: 80
+      port: 8083 # Port nach aussen (Internet)
+      targetPort: 80 # Interner Port der Container

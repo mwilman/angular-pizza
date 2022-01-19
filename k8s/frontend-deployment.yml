@@ -19,4 +19,4 @@ spec:
           image: mwilmanbag/pizza-angular:v1
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 80 # muss 80 sein, da nginx so eingerichtet ist
