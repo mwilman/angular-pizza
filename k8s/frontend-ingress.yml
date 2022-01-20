@@ -14,6 +14,16 @@ spec:
                 name: frontend-service
                 port:
                   number: 80
+    - host: old.maxim.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-service-parallel
+                port:
+                  number: 81
   ingressClassName: nginx
 #---
 #apiVersion: networking.k8s.io/v1
