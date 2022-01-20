@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service-parallel
+spec:
+  type: ClusterIP
+  selector:
+    app: pizza-angular-parallel
+  ports:
+    - protocol: TCP
+      port: 81 # Abstrakter Port für den Service. Der Service hört auf diesen Port. Kann sich vom Container Port unterscheiden, container port hat mit dem gar nix zu tun. Kann egal welcher sein, auf dem andere Pods ihn erreichen können
+      targetPort: 81 # Jeder Pod hört auf diesen Port. Der Port auf dem der container traffic akzeptiert. Kann sich vom Container Port unterscheiden..
+      #nodePort: 31000 # Auf diesen Port kann ich aus dem internet zugreifen. beispiel: localhost:31000
