@@ -28,6 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AllOverviewComponent } from './components/all-overview/all-overview.component';
 import { SideMenuComponent } from './layout/side-menu/side-menu.component';
+import {HttpClientModule} from '@angular/common/http';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -62,6 +63,7 @@ registerLocaleData(localeDe);
     MatTableModule,
     MatIconModule,
     MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
